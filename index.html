@@ -292,6 +292,177 @@
 
     <!-- === SECTIUNEA PROIECTE === -->
     <section id="proiecte">
+      <div class="container">
+        <div class="projects-header">
+          <span class="section-badge">Portofoliu</span>
+          <h2 class="projects-title">Proiectele <span class="text-gradient">mele</span></h2>
+          <p class="projects-subtitle">Creații digitale relevante</p>
+        </div>
+        
+        <!-- Filtre Categorie -->
+        <div class="projects-filters">
+          <button class="filter-btn active" data-filter="all">Toate</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+          <button class="filter-btn" data-filter="ai">AI & ML</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+        </div>
+        
+        <!-- Grid Proiecte -->
+        <div class="projects-grid">
+          <!-- CARD 1 -->
+          <div class="project-card animate-ready" data-category="frontend">
+            <div class="project-card-header">
+              <span class="project-tech-badge">WebGL 3D</span>
+              <span class="project-status in-construction">În construcție</span>
+            </div>
+            <h3>Creative 3D Portfolio</h3>
+            <p>Un portofoliu personal 3D imersiv construit folosind React Three Fiber și shadere custom.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">R3F</span>
+              <span class="project-tag">Three.js</span>
+              <span class="project-tag">Vite</span>
+              <span class="project-tag">Tailwind CSS</span>
+            </div>
+            <div class="project-details">
+              <p><strong>Detalii Proiect:</strong></p>
+              <p>Acest proiect reprezintă o explorare avansată a graficii web 3D. Utilizează shadere GLSL personalizate pentru a randa particule animate reactiv la mișcarea mouse-ului și fundaluri dinamice imersive.</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                Cod Sursă GitHub
+              </a>
+              <button type="button" class="details-toggle-btn">Detalii ▼</button>
+            </div>
+          </div>
+          
+          <!-- CARD 2 -->
+          <div class="project-card animate-ready" data-category="backend">
+            <div class="project-card-header">
+              <span class="project-tech-badge">Databases</span>
+              <span class="project-status in-construction">În construcție</span>
+            </div>
+            <h3>Sistem Gestiune Oracle</h3>
+            <p>Aplicație backend de gestiune comercială conectată la o bază de date Oracle cu tranzacționare în timp real.</p>
+            <div class="project-tags">
+              <span class="project-tag">Oracle SQL</span>
+              <span class="project-tag">PL/SQL Triggers</span>
+              <span class="project-tag">Stored Procedures</span>
+              <span class="project-tag">Java OOP</span>
+            </div>
+            <div class="project-details">
+              <p><strong>Detalii Proiect:</strong></p>
+              <p>Proiectul include modelarea completă a bazei de date relaționale, proceduri stocate complexe, cursoare, declanșatori (triggers) pentru securitate și un bridge JDBC implementat într-o consolă Java securizată.</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                Cod Sursă GitHub
+              </a>
+              <button type="button" class="details-toggle-btn">Detalii ▼</button>
+            </div>
+          </div>
+          
+          <!-- CARD 3 -->
+          <div class="project-card animate-ready" data-category="ai">
+            <div class="project-card-header">
+              <span class="project-tech-badge">Artificial Intelligence</span>
+              <span class="project-status launched">Lansat</span>
+            </div>
+            <h3>AI Chatbot Interface</h3>
+            <p>Interfață de chat fluidă conectată prin API-uri LLM, oferind răspunsuri generative în timp real cu streaming.</p>
+            <div class="project-tags">
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">OpenAI APIs</span>
+              <span class="project-tag">Framer Motion</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                Cod Sursă GitHub
+              </a>
+              <a href="#" class="demo-link">Demo Live →</a>
+            </div>
+          </div>
+          
+          <!-- CARD 4 -->
+          <div class="project-card animate-ready" data-category="backend">
+            <div class="project-card-header">
+              <span class="project-tech-badge">Java Backend</span>
+              <span class="project-status launched">Lansat</span>
+            </div>
+            <h3>Java Spring E-Commerce API</h3>
+            <p>API RESTful robust și complet dezvoltat în Java Spring Boot pentru platforme de comerț electronic.</p>
+            <div class="project-tags">
+              <span class="project-tag">Java SE</span>
+              <span class="project-tag">Spring Boot</span>
+              <span class="project-tag">Spring Security</span>
+              <span class="project-tag">JWT</span>
+              <span class="project-tag">JPA/Hibernate</span>
+            </div>
+            <div class="project-details">
+              <p><strong>Detalii Proiect:</strong></p>
+              <p>Include sistem complet de autentificare securizată prin JWT, controlul rolurilor, gestiunea coșului de cumpărături, checkout cu tranzacții ACID controlate prin Spring @Transactional și generare automată de PDF-uri.</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                Cod Sursă GitHub
+              </a>
+              <button type="button" class="details-toggle-btn">Detalii ▼</button>
+            </div>
+          </div>
+          
+          <!-- CARD 5 -->
+          <div class="project-card animate-ready" data-category="fullstack">
+            <div class="project-card-header">
+              <span class="project-tech-badge">Full-Stack</span>
+              <span class="project-status launched">Lansat</span>
+            </div>
+            <h3>Task Manager App</h3>
+            <p>Aplicație completă de management al task-urilor cu autentificare, CRUD și interfață modernă.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Spring Boot</span>
+              <span class="project-tag">Oracle SQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                Cod Sursă GitHub
+              </a>
+              <a href="#" class="demo-link">Demo Live →</a>
+            </div>
+          </div>
+          
+          <!-- CARD 6 -->
+          <div class="project-card animate-ready" data-category="frontend">
+            <div class="project-card-header">
+              <span class="project-tech-badge">Three.js</span>
+              <span class="project-status launched">Lansat</span>
+            </div>
+            <h3>3D Landing Page</h3>
+            <p>Landing page interactiv cu geometrie 3D animată, shader-uri custom și efecte de lumină dinamice.</p>
+            <div class="project-tags">
+              <span class="project-tag">Three.js</span>
+              <span class="project-tag">WebGL</span>
+              <span class="project-tag">GLSL Shaders</span>
+              <span class="project-tag">Vanilla JS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                Cod Sursă GitHub
+              </a>
+              <a href="#" class="demo-link">Demo Live →</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- === SECTIUNEA CONTACT === -->
