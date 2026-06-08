@@ -1,0 +1,41 @@
+/* === VARIABILE CSS ROOT === */
+:root {
+  /* === PALETA DE CULORI === */
+  --bg-primary: #08050f;
+  --bg-secondary: #100c1c;
+  --bg-tertiary: #16112a;
+  --accent-magenta: #d946ef;
+  --accent-violet: #7c3aed;
+  --accent-cyan: #06b6d4;
+  --text-primary: #f8f6ff;
+  --text-secondary: #a89bc2;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.16);
+
+  /* === TIPOGRAFIE === */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* === SCALĂ DE SPAȚIERE === */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* === RAZE BORDURĂ (BORDER RADIUS) === */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* === TRANZIȚII === */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 600ms ease;
+
+  /* === UMBRE ȘI GLOW-URI === */
+  --shadow-glow-magenta: 0 0 40px rgba(217, 70, 239, 0.3);
+}

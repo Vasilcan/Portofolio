@@ -1,0 +1,79 @@
+/* === RESET BOX-SIZING === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* === RESET MARGIN & PADDING === */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* === RESET HTML & SMOOTH SCROLL === */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* === RESET BODY DEFAULTS === */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* === RESET LISTS === */
+ul,
+ol {
+  list-style: none;
+}
+
+/* === RESPONSIVE IMAGES & MEDIA === */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* === INHERIT FORM ELEMENTS === */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* === SELECTION CUSTOM COLOR === */
+::selection {
+  background-color: #d946ef;
+  color: #ffffff;
+}
+
+/* === CUSTOM SCROLLBAR === */
+/* Webkit (Chrome, Safari, Edge, Opera) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #100c1c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d946ef, #7c3aed);
+  border-radius: 3px;
+}
+
+/* Firefox scrollbar fallback */
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #7c3aed #100c1c;
+  }
+}
