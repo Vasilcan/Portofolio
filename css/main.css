@@ -1535,6 +1535,91 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* === ANIMATE ON SCROLL TRANSITIONS === */
+.animate-ready {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.animate-ready.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === NO-JS FALLBACK === */
+.no-js .animate-ready {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* === SCROLL PROGRESS BAR === */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-magenta), var(--accent-violet));
+  z-index: 2000;
+  transition: width 0.1s ease-out;
+}
+
+/* === CUSTOM CURSOR === */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-magenta);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  will-change: transform;
+}
+
+#cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--accent-magenta);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, border-color 0.2s, opacity 0.2s;
+  will-change: transform;
+}
+
+/* Custom cursor scale during hover on links/buttons */
+#custom-cursor.hovering {
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent-magenta);
+  opacity: 0.8;
+}
+
+#cursor-follower.hovering {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+
+/* Hide on touch devices */
+@media (pointer: coarse) {
+  #custom-cursor,
+  #cursor-follower {
+    display: none !important;
+  }
+}
+
 /* === SUPORT PREFERS REDUCED MOTION === */
 @media (prefers-reduced-motion: reduce) {
   .hero-container > *,
@@ -1549,6 +1634,11 @@ h1, h2, h3, h4, h5, h6 {
   .scroll-indicator .arrow,
   .timeline-item--current .timeline-dot {
     animation: none !important;
+  }
+
+  #custom-cursor,
+  #cursor-follower {
+    display: none !important;
   }
 }
 

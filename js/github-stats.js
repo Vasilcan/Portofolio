@@ -1,64 +1,12 @@
 /* === GITHUB STATS & CONTOARE ANIMATE === */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Inițializează contoarele animate
-  animateCounters();
-  
   // Inițializează datele live de pe GitHub
   fetchGitHubStats();
   
   // Inițializează bannerul de disponibilitate
   initAvailabilityBanner();
 });
-
-/* === ANIMAȚIE CONTOARE (NUMERE) === */
-const animateCounters = () => {
-  const counters = document.querySelectorAll('.stat-number');
-  
-  const observerOptions = {
-    root: null,
-    threshold: 0.1
-  };
-  
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const targetElement = entry.target;
-        const targetText = targetElement.textContent || '';
-        const targetVal = parseInt(targetElement.getAttribute('data-target'), 10);
-        const hasPlus = targetText.includes('+');
-        
-        if (!isNaN(targetVal)) {
-          let startVal = 0;
-          const duration = 1500; // ms
-          const startTime = performance.now();
-          
-          const updateCounter = (currentTime) => {
-            const elapsedTime = currentTime - startTime;
-            const progress = Math.min(elapsedTime / duration, 1);
-            
-            // Easing cubic out: f(t) = 1 - (1 - t)^3
-            const easeProgress = 1 - Math.pow(1 - progress, 3);
-            const currentVal = Math.floor(easeProgress * targetVal);
-            
-            targetElement.textContent = `${currentVal}${hasPlus ? '+' : ''}`;
-            
-            if (progress < 1) {
-              requestAnimationFrame(updateCounter);
-            } else {
-              targetElement.textContent = `${targetVal}${hasPlus ? '+' : ''}`;
-            }
-          };
-          
-          requestAnimationFrame(updateCounter);
-          observer.unobserve(targetElement);
-        }
-      }
-    });
-  }, observerOptions);
-  
-  counters.forEach(counter => observer.observe(counter));
-};
 
 /* === OBTINERE DATE LIVE GITHUB === */
 const fetchGitHubStats = async () => {
