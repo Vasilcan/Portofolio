@@ -31,16 +31,109 @@
 
   <!-- === HEADER & NAVBAR === -->
   <header id="navbar">
+    <div class="container nav-container">
+      <!-- Logo stânga -->
+      <a href="#hero" class="nav-logo">VD</a>
+
+      <!-- Nav links dreapta -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Acasă</a></li>
+          <li><a href="#abilitati" class="nav-link">Abilități</a></li>
+          <li><a href="#proiecte" class="nav-link">Proiecte</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Language switcher & Hamburger -->
+      <div class="nav-actions">
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn active" data-lang="ro">RO</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Meniu navigare">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
   </header>
 
   <!-- === CONȚINUT PRINCIPAL === -->
   <main>
     <!-- === SECTIUNEA HERO === -->
     <section id="hero">
+      <div id="hero-canvas"></div>
+      <div class="container hero-container">
+        <span class="section-badge">✦ Student IE & Developer</span>
+        <h1 class="hero-title">Salut, sunt <span class="text-gradient">Darius</span></h1>
+        <p class="hero-subtitle">Student pasionat de Informatică Economică, axat pe dezvoltarea de aplicații web moderne, programare robustă în Java, baze de date Oracle și integrarea soluțiilor AI de ultimă generație.</p>
+        <div class="hero-cta">
+          <a href="#proiecte" class="btn-primary">▦ Explorează proiectele</a>
+          <a href="assets/cv/cv-darius.pdf" download class="btn-secondary">↓ Descarcă CV</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Despre mine</span>
+        <span class="arrow">↓</span>
+      </div>
     </section>
 
     <!-- === SECTIUNEA DESPRE === -->
     <section id="despre">
+      <div class="container">
+        <div class="about-header">
+          <span class="section-badge">Despre mine</span>
+          <h2 class="about-title">Cine este <span class="text-gradient">Vasilcan Darius</span>?</h2>
+        </div>
+        <div class="about-grid">
+          <!-- COLOANA STÂNGĂ — FOTO & DISPONIBILITATE -->
+          <div class="about-photo-wrap">
+            <img src="assets/img/darius.jpg" alt="Vasilcan Darius" class="about-photo">
+            <div class="availability-badge">
+              <span class="pulse-dot"></span>
+              <span>Disponibil pentru proiecte</span>
+            </div>
+          </div>
+          
+          <!-- COLOANA DREAPTĂ — TEXT & STATISTICI -->
+          <div class="about-content">
+            <p class="about-lead">Sunt student la facultatea de Cibernetică, Statistică și Informatică Economică, axat pe rezolvarea de probleme prin cod eficient și design intuitiv.</p>
+            <p class="about-text">Mă concentrez pe stiva modernă de web (React, TypeScript), dar am o bază solidă de programare în Java Spring Boot, gestiunea datelor cu Oracle SQL și integrarea celor mai recente API-uri de AI generativ pentru a automatiza fluxuri și a spori productivitatea.</p>
+            
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-number" data-target="2">2+</span>
+                <span class="stat-label">Ani Dezvoltare Web</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number" id="github-projects" data-target="15">15+</span>
+                <span class="stat-label">Proiecte Finalizate</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number" data-target="10">10+</span>
+                <span class="stat-label">Tehnologii Stăpânite</span>
+              </div>
+            </div>
+            
+            <!-- Statistici GitHub suplimentare (afișate dinamic prin JS) -->
+            <div class="github-extra-stats" id="github-extra-stats" style="display:none; margin-top: 1rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem;">
+              <p style="margin-bottom: 0.5rem;">📊 <strong>Activitate Live GitHub (username: Vasilcan):</strong></p>
+              <ul style="list-style: none; padding-left: 0; display: flex; flex-wrap: wrap; gap: 1rem;">
+                <li id="github-stars-item" style="display:none; align-items: center; gap: 0.25rem;">⭐ <span id="github-stars">0</span> stele primite</li>
+                <li id="github-activity-item" style="display:none; align-items: center; gap: 0.25rem;">📅 <span id="github-active-days">activ recent</span></li>
+                <li id="github-languages-item" style="display:none; align-items: center; gap: 0.25rem;">💻 Top limbaje: <span id="github-languages"></span></li>
+              </ul>
+            </div>
+            
+            <div class="about-buttons">
+              <a href="assets/cv/cv-darius.pdf" download class="btn-primary">Descarcă CV</a>
+              <a href="#contact" class="btn-secondary">Hai să discutăm →</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- === SECTIUNEA ABILITATI === -->
