@@ -10,6 +10,42 @@ body {
   overflow-x: hidden;
 }
 
+/* === ACCESIBILITATE & FOCUS VISIBLE === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.lang-btn:focus-visible,
+.filter-btn:focus-visible,
+.details-toggle-btn:focus-visible {
+  outline: 2px solid var(--accent-magenta) !important;
+  outline-offset: 3px !important;
+}
+
+/* === SKIP LINK === */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--accent-magenta);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  transition: top 0.2s ease;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* === SCROLL MARGIN FOR SECTION SMOOTH SCROLL === */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 /* === TIPOGRAFIE DE DISPLAY === */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
@@ -1400,8 +1436,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-glow-magenta);
 }
 
-/* === RESPONSIVE TABLETE (768PX) === */
-@media (max-width: 767px) {
+/* === RESPONSIVE MOBILE (MAX-WIDTH: 768PX) === */
+@media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
@@ -1483,10 +1519,59 @@ h1, h2, h3, h4, h5, h6 {
   .timeline-item .timeline-empty {
     display: none;
   }
+
+  /* Hero Mobile adjustments */
+  #hero .hero-title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem) !important;
+  }
+
+  #hero .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0.75rem;
+  }
+
+  #hero .hero-cta a {
+    width: 100%;
+  }
+
+  /* Despre Mobile adjustments */
+  #despre .about-photo-wrap {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* Proiecte Mobile horizontal filter scroll */
+  .projects-filters {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 0.75rem;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+  }
+
+  .projects-filters::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari/Webkit */
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Custom cursor hide on mobile */
+  #custom-cursor,
+  #cursor-follower {
+    display: none !important;
+  }
 }
 
-@media (min-width: 768px) {
-  /* Stiluri specifice tabletelor (Mobile-first) */
+/* === RESPONSIVE TABLETE & DESKTOP (MIN-WIDTH: 769PX) === */
+@media (min-width: 769px) {
   .about-stats {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1514,9 +1599,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* === RESPONSIVE DESKTOP (1024PX) === */
-@media (min-width: 1024px) {
-  /* Stiluri specifice desktop-urilor (Mobile-first) */
+/* === RESPONSIVE TABLETE SPECIFIC (769PX - 1024PX) === */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #hero .hero-title {
+    font-size: 4rem !important;
+  }
+
+  #despre .about-grid {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+  }
+}
+
+/* === RESPONSIVE DESKTOP (MIN-WIDTH: 1025PX) === */
+@media (min-width: 1025px) {
   .about-grid {
     grid-template-columns: 1fr 1.5fr;
     gap: 4rem;
@@ -1532,6 +1628,10 @@ h1, h2, h3, h4, h5, h6 {
   
   .skill-card:nth-child(1) {
     grid-column: span 1;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

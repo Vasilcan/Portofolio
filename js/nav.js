@@ -138,6 +138,23 @@ document.addEventListener('DOMContentLoaded', () => {
     langButtons.forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
+
+    // Reset contact form status & errors on language change
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.reset();
+      const formStatus = document.getElementById('form-status');
+      if (formStatus) {
+        formStatus.className = '';
+        formStatus.textContent = '';
+      }
+      form.querySelectorAll('.input-error').forEach(input => {
+        input.classList.remove('input-error');
+      });
+      form.querySelectorAll('.input-error-msg').forEach(msg => {
+        msg.remove();
+      });
+    }
     
     // Salvează preferința
     localStorage.setItem('portfolio-lang', lang);
