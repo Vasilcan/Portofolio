@@ -697,6 +697,168 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
+/* === STILURI SECȚIUNEA TIMELINE === */
+#timeline {
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-top: var(--space-xs);
+  color: var(--text-primary);
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 4rem auto 0;
+}
+
+/* Linia verticală centrală */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, var(--accent-magenta) 0%, var(--accent-violet) 70%, transparent 100%);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: start;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-item.left .timeline-content {
+  grid-column: 1;
+}
+
+.timeline-item.left .timeline-dot {
+  grid-column: 2;
+}
+
+.timeline-item.left .timeline-empty {
+  grid-column: 3;
+}
+
+.timeline-item.right .timeline-empty {
+  grid-column: 1;
+}
+
+.timeline-item.right .timeline-dot {
+  grid-column: 2;
+}
+
+.timeline-item.right .timeline-content {
+  grid-column: 3;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background-color: var(--accent-magenta);
+  border-radius: 50%;
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 0 4px rgba(217, 70, 239, 0.2);
+  margin: 7px auto 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Indicator element curent */
+.timeline-item--current .timeline-dot {
+  animation: pulse-magenta 2s ease infinite;
+}
+
+.timeline-content {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+}
+
+.timeline-content:hover {
+  border-color: rgba(217, 70, 239, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Marcaj an */
+.timeline-year {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent-magenta);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.timeline-content p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Tag milestone */
+.timeline-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  background-color: rgba(217, 70, 239, 0.1);
+  border: 1px solid rgba(217, 70, 239, 0.3);
+  border-radius: var(--radius-pill);
+  padding: 0.25rem 0.75rem;
+  color: var(--accent-magenta);
+}
+
+/* Stiluri specifice animației direcționale timeline */
+.timeline-item.left.animate-ready {
+  transform: translateX(-30px);
+}
+
+.timeline-item.right.animate-ready {
+  transform: translateX(30px);
+}
+
+.timeline-item.animate-ready.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Keyframes pulse magenta */
+@keyframes pulse-magenta {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(217, 70, 239, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(217, 70, 239, 0);
+  }
+}
+
 /* === RESPONSIVE TABLETE (768PX) === */
 @media (max-width: 767px) {
   .hamburger {
@@ -752,6 +914,34 @@ h1, h2, h3, h4, h5, h6 {
   .hamburger.open .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+
+  /* Timeline mobil (aliniere liniară în stânga) */
+  .timeline-container::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    padding-left: 48px;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    grid-column: 1;
+  }
+
+  .timeline-item .timeline-dot {
+    position: absolute;
+    left: 14px;
+    top: 24px;
+    margin: 0;
+  }
+
+  .timeline-item .timeline-empty {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -792,13 +982,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* === SUPORT PREFERS REDUCED MOTION === */
 @media (prefers-reduced-motion: reduce) {
-  .hero-container > * {
+  .hero-container > *,
+  .timeline-item.animate-ready,
+  .animate-ready {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
+    transition: none !important;
   }
 
-  .scroll-indicator .arrow {
+  .scroll-indicator .arrow,
+  .timeline-item--current .timeline-dot {
     animation: none !important;
   }
 }
