@@ -1102,9 +1102,302 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 
-.project-card.fade-in {
-  opacity: 1;
-  scale: 1;
+}
+
+/* === STILURI SECȚIUNEA CONTACT === */
+#contact {
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.contact-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-top: var(--space-xs);
+  color: var(--text-primary);
+}
+
+.contact-subtitle {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--text-secondary);
+  margin-top: var(--space-md);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Info stânga */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base), transform var(--transition-base);
+}
+
+.contact-card:hover {
+  border-color: rgba(217, 70, 239, 0.4);
+  transform: translateY(-2px);
+}
+
+.contact-card-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-magenta);
+  flex-shrink: 0;
+}
+
+.contact-card-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.contact-card-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+}
+
+.contact-card-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color var(--transition-fast);
+}
+
+.contact-card-link:hover {
+  color: var(--accent-magenta);
+}
+
+/* Banner mare disponibilitate */
+.availability-banner {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.05), rgba(34, 197, 94, 0.02));
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.availability-banner-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.availability-banner-header .pulse-dot {
+  flex-shrink: 0;
+}
+
+.availability-banner-note {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  padding-left: 1.25rem;
+}
+
+/* Formular dreapta */
+.contact-form-wrap {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.875rem 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-magenta);
+  box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.full-width-btn {
+  width: 100%;
+}
+
+/* Status formular */
+#form-status {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  transition: opacity var(--transition-base);
+}
+
+#form-status.success {
+  color: #22c55e;
+  padding: 0.75rem 1rem;
+  background-color: rgba(34, 197, 94, 0.08);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+#form-status.error {
+  color: #ef4444;
+  padding: 0.75rem 1rem;
+  background-color: rgba(239, 68, 68, 0.08);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.input-error-msg {
+  display: block;
+  font-size: 0.75rem;
+  color: #ef4444;
+  margin-top: 0.25rem;
+  padding-left: 0.25rem;
+}
+
+.form-group input.input-error,
+.form-group textarea.input-error {
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* === STILURI FOOTER === */
+#footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.footer-center p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-socials a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: flex;
+}
+
+.footer-socials a:hover {
+  color: var(--accent-magenta);
+  transform: translateY(-2px);
+}
+
+.footer-social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Buton Scroll-To-Top */
+.scroll-top-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--accent-magenta);
+  color: #ffffff;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
+  box-shadow: 0 4px 15px rgba(217, 70, 239, 0.2);
+  line-height: 1;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px);
+  background-color: #e25ff2;
+  box-shadow: var(--shadow-glow-magenta);
 }
 
 /* === RESPONSIVE TABLETE (768PX) === */
@@ -1209,6 +1502,16 @@ h1, h2, h3, h4, h5, h6 {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
 }
 
 /* === RESPONSIVE DESKTOP (1024PX) === */
@@ -1246,5 +1549,12 @@ h1, h2, h3, h4, h5, h6 {
   .scroll-indicator .arrow,
   .timeline-item--current .timeline-dot {
     animation: none !important;
+  }
+}
+
+/* === SPINNING ANIMATION FOR LOADING BUTTONS === */
+@keyframes spin-btn {
+  to {
+    transform: rotate(360deg);
   }
 }
