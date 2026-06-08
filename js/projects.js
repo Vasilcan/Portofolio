@@ -114,10 +114,11 @@ const initDetailsExpander = () => {
       
       if (details) {
         details.classList.toggle('show');
+        const lang = document.documentElement.lang || 'ro';
         if (details.classList.contains('show')) {
-          btn.textContent = 'Detalii ▲';
+          btn.textContent = lang === 'en' ? 'Details ▲' : 'Detalii ▲';
         } else {
-          btn.textContent = 'Detalii ▼';
+          btn.textContent = lang === 'en' ? 'Details ▼' : 'Detalii ▼';
         }
       }
     });

@@ -39,10 +39,10 @@
       <!-- Nav links dreapta -->
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
-          <li><a href="#hero" class="nav-link active">Acasă</a></li>
-          <li><a href="#abilitati" class="nav-link">Abilități</a></li>
-          <li><a href="#proiecte" class="nav-link">Proiecte</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#hero" class="nav-link active" data-ro="Acasă" data-en="Home">Acasă</a></li>
+          <li><a href="#abilitati" class="nav-link" data-ro="Abilități" data-en="Skills">Abilități</a></li>
+          <li><a href="#proiecte" class="nav-link" data-ro="Proiecte" data-en="Projects">Proiecte</a></li>
+          <li><a href="#contact" class="nav-link" data-ro="Contact" data-en="Contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -52,7 +52,7 @@
           <button type="button" class="lang-btn active" data-lang="ro">RO</button>
           <button type="button" class="lang-btn" data-lang="en">EN</button>
         </div>
-        <button type="button" class="hamburger" id="hamburger" aria-label="Meniu navigare">
+        <button type="button" class="hamburger" id="hamburger" aria-label="Meniu navigare" data-aria-ro="Meniu navigare" data-aria-en="Navigation menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -67,16 +67,19 @@
     <section id="hero">
       <div id="hero-canvas"></div>
       <div class="container hero-container">
-        <span class="section-badge">✦ Student IE & Developer</span>
-        <h1 class="hero-title">Salut, sunt <span class="text-gradient">Darius</span></h1>
-        <p class="hero-subtitle">Student pasionat de Informatică Economică, axat pe dezvoltarea de aplicații web moderne, programare robustă în Java, baze de date Oracle și integrarea soluțiilor AI de ultimă generație.</p>
+        <span class="section-badge" data-ro="✦ Student IE & Developer" data-en="✦ IE Student & Developer">✦ Student IE & Developer</span>
+        <h1 class="hero-title">
+          <span data-ro="Salut, sunt " data-en="Hey, I'm ">Salut, sunt </span>
+          <span class="text-gradient" data-ro="Darius" data-en="Darius">Darius</span>
+        </h1>
+        <p class="hero-subtitle" data-ro="Student pasionat de Informatică Economică, axat pe dezvoltarea de aplicații web moderne, programare robustă în Java, baze de date Oracle și integrarea soluțiilor AI de ultimă generație." data-en="Passionate Business Informatics student, focused on developing modern web applications, robust programming in Java, Oracle databases, and integrating state-of-the-art AI solutions.">Student pasionat de Informatică Economică, axat pe dezvoltarea de aplicații web moderne, programare robustă în Java, baze de date Oracle și integrarea soluțiilor AI de ultimă generație.</p>
         <div class="hero-cta">
-          <a href="#proiecte" class="btn-primary">▦ Explorează proiectele</a>
-          <a href="assets/cv/cv-darius.pdf" download class="btn-secondary">↓ Descarcă CV</a>
+          <a href="#proiecte" class="btn-primary" data-ro="▦ Explorează proiectele" data-en="▦ Explore projects">▦ Explorează proiectele</a>
+          <a href="assets/cv/cv-darius.pdf" download class="btn-secondary" data-ro="↓ Descarcă CV" data-en="↓ Download CV">↓ Descarcă CV</a>
         </div>
       </div>
       <div class="scroll-indicator">
-        <span>Despre mine</span>
+        <span data-ro="Despre mine" data-en="About me">Despre mine</span>
         <span class="arrow">↓</span>
       </div>
     </section>
@@ -85,8 +88,11 @@
     <section id="despre">
       <div class="container">
         <div class="about-header">
-          <span class="section-badge">Despre mine</span>
-          <h2 class="about-title">Cine este <span class="text-gradient">Vasilcan Darius</span>?</h2>
+          <span class="section-badge" data-ro="Despre mine" data-en="About me">Despre mine</span>
+          <h2 class="about-title">
+            <span data-ro="Cine este " data-en="Who is ">Cine este </span>
+            <span class="text-gradient" data-ro="Vasilcan Darius" data-en="Vasilcan Darius">Vasilcan Darius</span>?
+          </h2>
         </div>
         <div class="about-grid">
           <!-- COLOANA STÂNGĂ — FOTO & DISPONIBILITATE -->
@@ -94,43 +100,49 @@
             <img src="assets/img/darius.jpg" alt="Vasilcan Darius" class="about-photo">
             <div class="availability-badge">
               <span class="pulse-dot"></span>
-              <span>Disponibil pentru proiecte</span>
+              <span data-ro="Disponibil pentru proiecte" data-en="Available for projects">Disponibil pentru proiecte</span>
             </div>
           </div>
           
           <!-- COLOANA DREAPTĂ — TEXT & STATISTICI -->
           <div class="about-content">
-            <p class="about-lead">Sunt student la facultatea de Cibernetică, Statistică și Informatică Economică, axat pe rezolvarea de probleme prin cod eficient și design intuitiv.</p>
-            <p class="about-text">Mă concentrez pe stiva modernă de web (React, TypeScript), dar am o bază solidă de programare în Java Spring Boot, gestiunea datelor cu Oracle SQL și integrarea celor mai recente API-uri de AI generativ pentru a automatiza fluxuri și a spori productivitatea.</p>
+            <p class="about-lead" data-ro="Sunt student la facultatea de Cibernetică, Statistică și Informatică Economică, axat pe rezolvarea de probleme prin cod eficient și design intuitiv." data-en="I am a student at the Faculty of Cybernetics, Statistics and Economic Informatics, focused on solving problems through efficient code and intuitive design.">Sunt student la facultatea de Cibernetică, Statistică și Informatică Economică, axat pe rezolvarea de probleme prin cod eficient și design intuitiv.</p>
+            <p class="about-text" data-ro="Mă concentrez pe stiva modernă de web (React, TypeScript), dar am o bază solidă de programare în Java Spring Boot, gestiunea datelor cu Oracle SQL și integrarea celor mai recente API-uri de AI generativ pentru a automatiza fluxuri și a spori productivitatea." data-en="I focus on the modern web stack (React, TypeScript), but I have a solid foundation in Java Spring Boot programming, data management with Oracle SQL, and integrating the latest generative AI APIs to automate workflows and increase productivity.">Mă concentrez pe stiva modernă de web (React, TypeScript), dar am o bază solidă de programare în Java Spring Boot, gestiunea datelor cu Oracle SQL și integrarea celor mai recente API-uri de AI generativ pentru a automatiza fluxuri și a spori productivitatea.</p>
             
             <div class="about-stats">
               <div class="stat-card">
                 <span class="stat-number" data-target="2">2+</span>
-                <span class="stat-label">Ani Dezvoltare Web</span>
+                <span class="stat-label" data-ro="Ani Dezvoltare Web" data-en="Years Web Dev">Ani Dezvoltare Web</span>
               </div>
               <div class="stat-card">
                 <span class="stat-number" id="github-projects" data-target="15">15+</span>
-                <span class="stat-label">Proiecte Finalizate</span>
+                <span class="stat-label" data-ro="Proiecte Finalizate" data-en="Completed Projects">Proiecte Finalizate</span>
               </div>
               <div class="stat-card">
                 <span class="stat-number" data-target="10">10+</span>
-                <span class="stat-label">Tehnologii Stăpânite</span>
+                <span class="stat-label" data-ro="Tehnologii Stăpânite" data-en="Technologies Mastered">Tehnologii Stăpânite</span>
               </div>
             </div>
             
             <!-- Statistici GitHub suplimentare (afișate dinamic prin JS) -->
             <div class="github-extra-stats" id="github-extra-stats" style="display:none; margin-top: 1rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem;">
-              <p style="margin-bottom: 0.5rem;">📊 <strong>Activitate Live GitHub (username: Vasilcan):</strong></p>
+              <p style="margin-bottom: 0.5rem;" data-ro="📊 Activitate Live GitHub (username: Vasilcan):" data-en="📊 Live GitHub Activity (username: Vasilcan):">📊 <strong>Activitate Live GitHub (username: Vasilcan):</strong></p>
               <ul style="list-style: none; padding-left: 0; display: flex; flex-wrap: wrap; gap: 1rem;">
-                <li id="github-stars-item" style="display:none; align-items: center; gap: 0.25rem;">⭐ <span id="github-stars">0</span> stele primite</li>
-                <li id="github-activity-item" style="display:none; align-items: center; gap: 0.25rem;">📅 <span id="github-active-days">activ recent</span></li>
-                <li id="github-languages-item" style="display:none; align-items: center; gap: 0.25rem;">💻 Top limbaje: <span id="github-languages"></span></li>
+                <li id="github-stars-item" style="display:none; align-items: center; gap: 0.25rem;">
+                  ⭐ <span id="github-stars">0</span> <span data-ro="stele primite" data-en="stars received">stele primite</span>
+                </li>
+                <li id="github-activity-item" style="display:none; align-items: center; gap: 0.25rem;">
+                  📅 <span id="github-active-days" data-ro="activ recent" data-en="recent activity">activ recent</span>
+                </li>
+                <li id="github-languages-item" style="display:none; align-items: center; gap: 0.25rem;">
+                  💻 <span data-ro="Top limbaje: " data-en="Top languages: ">Top limbaje: </span><span id="github-languages"></span>
+                </li>
               </ul>
             </div>
             
             <div class="about-buttons">
-              <a href="assets/cv/cv-darius.pdf" download class="btn-primary">Descarcă CV</a>
-              <a href="#contact" class="btn-secondary">Hai să discutăm →</a>
+              <a href="assets/cv/cv-darius.pdf" download class="btn-primary" data-ro="Descarcă CV" data-en="Download CV">Descarcă CV</a>
+              <a href="#contact" class="btn-secondary" data-ro="Hai să discutăm →" data-en="Let's talk →">Hai să discutăm →</a>
             </div>
           </div>
         </div>
@@ -141,9 +153,12 @@
     <section id="abilitati">
       <div class="container">
         <div class="skills-header">
-          <span class="section-badge">Abilități tehnice</span>
-          <h2 class="skills-title">Ecosistemul meu <span class="text-gradient">de lucru</span></h2>
-          <p class="skills-subtitle">Am dezvoltat un set solid de competențe tehnice ce îmi permite să acopăr întregul ciclu de viață al unei aplicații moderne, de la baza de date până la animații 3D direct în browser.</p>
+          <span class="section-badge" data-ro="Abilități tehnice" data-en="Technical skills">Abilități tehnice</span>
+          <h2 class="skills-title">
+            <span data-ro="Ecosistemul meu " data-en="My working ">Ecosistemul meu </span>
+            <span class="text-gradient" data-ro="de lucru" data-en="ecosystem">de lucru</span>
+          </h2>
+          <p class="skills-subtitle" data-ro="Am dezvoltat un set solid de competențe tehnice ce îmi permite să acopăr întregul ciclu de viață al unei aplicații moderne, de la baza de date până la animații 3D direct în browser." data-en="I have developed a solid set of technical skills that allows me to cover the entire lifecycle of a modern application, from the database to 3D animations directly in the browser.">Am dezvoltat un set solid de competențe tehnice ce îmi permite să acopăr întregul ciclu de viață al unei aplicații moderne, de la baza de date până la animații 3D direct în browser.</p>
         </div>
         
         <div class="skills-grid">
@@ -156,7 +171,7 @@
                 <path d="M3 12V19C3 20.66 7.03 22 12 22C16.97 22 21 20.66 21 19V12"></path>
               </svg>
             </div>
-            <h3>Backend & Baze de date</h3>
+            <h3 data-ro="Backend & Baze de date" data-en="Backend & Databases">Backend & Baze de date</h3>
             <div class="skill-tags">
               <span class="skill-tag">Java SE & OOP</span>
               <span class="skill-tag">Oracle SQL</span>
@@ -176,7 +191,7 @@
                 <line x1="6" y1="21" x2="6" y2="8"></line>
               </svg>
             </div>
-            <h3>Frontend & 3D Web</h3>
+            <h3 data-ro="Frontend & 3D Web" data-en="Frontend & 3D Web">Frontend & 3D Web</h3>
             <div class="skill-tags">
               <span class="skill-tag">React SPA Ecosystem</span>
               <span class="skill-tag">TypeScript</span>
@@ -204,7 +219,7 @@
                 <line x1="1" y1="15" x2="4" y2="15"></line>
               </svg>
             </div>
-            <h3>Instrumente & AI</h3>
+            <h3 data-ro="Instrumente & AI" data-en="Tools & AI">Instrumente & AI</h3>
             <div class="skill-tags">
               <span class="skill-tag">Git & GitHub Versioning</span>
               <span class="skill-tag">Generative AI Integrations</span>
@@ -223,8 +238,11 @@
     <section id="timeline">
       <div class="container">
         <div class="timeline-header">
-          <span class="section-badge">Parcurs</span>
-          <h2 class="timeline-title">Cum am <span class="text-gradient">evoluat</span></h2>
+          <span class="section-badge" data-ro="Parcurs" data-en="Journey">Parcurs</span>
+          <h2 class="timeline-title">
+            <span data-ro="Cum am " data-en="How I ">Cum am </span>
+            <span class="text-gradient" data-ro="evoluat" data-en="evolved">evoluat</span>
+          </h2>
         </div>
         
         <div class="timeline-container">
@@ -232,9 +250,9 @@
           <div class="timeline-item left animate-ready">
             <div class="timeline-content">
               <span class="timeline-year">2023</span>
-              <h3>Facultatea de Cibernetică, Statistică și Informatică Economică</h3>
-              <p>Am început studiile universitare, descoperind pasiunea pentru programare și arhitectura sistemelor software.</p>
-              <span class="timeline-tag">🎓 Educație</span>
+              <h3 data-ro="Facultatea de Cibernetică, Statistică și Informatică Economică" data-en="Faculty of Cybernetics, Statistics and Economic Informatics">Facultatea de Cibernetică, Statistică și Informatică Economică</h3>
+              <p data-ro="Am început studiile universitare, descoperind pasiunea pentru programare și arhitectura sistemelor software." data-en="I started my university studies, discovering a passion for programming and software systems architecture.">Am început studiile universitare, descoperind pasiunea pentru programare și arhitectura sistemelor software.</p>
+              <span class="timeline-tag" data-ro="🎓 Educație" data-en="🎓 Education">🎓 Educație</span>
             </div>
             <div class="timeline-dot"></div>
             <div class="timeline-empty"></div>
@@ -246,9 +264,9 @@
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-year">2023</span>
-              <h3>Primele proiecte web</h3>
-              <p>HTML, CSS, JavaScript pur — primele pagini statice și aplicații interactive simple. Fundația solidă.</p>
-              <span class="timeline-tag">💻 Frontend</span>
+              <h3 data-ro="Primele proiecte web" data-en="First web projects">Primele proiecte web</h3>
+              <p data-ro="HTML, CSS, JavaScript pur — primele pagini statice și aplicații interactive simple. Fundația solidă." data-en="Pure HTML, CSS, JavaScript — first static pages and simple interactive applications. Solid foundation.">HTML, CSS, JavaScript pur — primele pagini statice și aplicații interactive simple. Fundația solidă.</p>
+              <span class="timeline-tag" data-ro="💻 Frontend" data-en="💻 Frontend">💻 Frontend</span>
             </div>
           </div>
           
@@ -256,9 +274,9 @@
           <div class="timeline-item left animate-ready">
             <div class="timeline-content">
               <span class="timeline-year">2024</span>
-              <h3>Java & Oracle SQL</h3>
-              <p>Programare orientată obiect în Java, baze de date relaționale Oracle, PL/SQL Triggers și Stored Procedures.</p>
-              <span class="timeline-tag">🗄️ Backend</span>
+              <h3 data-ro="Java & Oracle SQL" data-en="Java & Oracle SQL">Java & Oracle SQL</h3>
+              <p data-ro="Programare orientată obiect în Java, baze de date relaționale Oracle, PL/SQL Triggers și Stored Procedures." data-en="Object-oriented programming in Java, Oracle relational databases, PL/SQL Triggers and Stored Procedures.">Programare orientată obiect în Java, baze de date relaționale Oracle, PL/SQL Triggers și Stored Procedures.</p>
+              <span class="timeline-tag" data-ro="🗄️ Backend" data-en="🗄️ Backend">🗄️ Backend</span>
             </div>
             <div class="timeline-dot"></div>
             <div class="timeline-empty"></div>
@@ -270,9 +288,9 @@
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-year">2024</span>
-              <h3>React, TypeScript & Three.js</h3>
-              <p>Ecosistemul frontend modern — SPA-uri cu React, tipizare TypeScript și explorarea WebGL prin Three.js.</p>
-              <span class="timeline-tag">⚛️ Frontend Avansat</span>
+              <h3 data-ro="React, TypeScript & Three.js" data-en="React, TypeScript & Three.js">React, TypeScript & Three.js</h3>
+              <p data-ro="Ecosistemul frontend modern — SPA-uri cu React, tipizare TypeScript și explorarea WebGL prin Three.js." data-en="Modern frontend ecosystem — React SPAs, TypeScript typing, and exploring WebGL through Three.js.">Ecosistemul frontend modern — SPA-uri cu React, tipizare TypeScript și explorarea WebGL prin Three.js.</p>
+              <span class="timeline-tag" data-ro="⚛️ Frontend Avansat" data-en="⚛️ Advanced Frontend">⚛️ Frontend Avansat</span>
             </div>
           </div>
           
@@ -280,9 +298,9 @@
           <div class="timeline-item left timeline-item--current animate-ready">
             <div class="timeline-content">
               <span class="timeline-year">2025–prezent</span>
-              <h3>AI Integrations & Full-Stack</h3>
-              <p>Integrarea API-urilor LLM, Spring Boot pentru backend scalabil, proiecte full-stack complete.</p>
-              <span class="timeline-tag">🤖 AI & Full-Stack</span>
+              <h3 data-ro="AI Integrations & Full-Stack" data-en="AI Integrations & Full-Stack">AI Integrations & Full-Stack</h3>
+              <p data-ro="Integrarea API-urilor LLM, Spring Boot pentru backend scalabil, proiecte full-stack complete." data-en="Integrating LLM APIs, Spring Boot for scalable backend, complete full-stack projects.">Integrarea API-urilor LLM, Spring Boot pentru backend scalabil, proiecte full-stack complete.</p>
+              <span class="timeline-tag" data-ro="🤖 AI & Full-Stack" data-en="🤖 AI & Full-Stack">🤖 AI & Full-Stack</span>
             </div>
             <div class="timeline-dot"></div>
             <div class="timeline-empty"></div>
@@ -295,18 +313,21 @@
     <section id="proiecte">
       <div class="container">
         <div class="projects-header">
-          <span class="section-badge">Portofoliu</span>
-          <h2 class="projects-title">Proiectele <span class="text-gradient">mele</span></h2>
-          <p class="projects-subtitle">Creații digitale relevante</p>
+          <span class="section-badge" data-ro="Portofoliu" data-en="Portfolio">Portofoliu</span>
+          <h2 class="projects-title">
+            <span data-ro="Proiectele " data-en="My ">Proiectele </span>
+            <span class="text-gradient" data-ro="mele" data-en="projects">mele</span>
+          </h2>
+          <p class="projects-subtitle" data-ro="Creații digitale relevante" data-en="Relevant digital creations">Creații digitale relevante</p>
         </div>
         
         <!-- Filtre Categorie -->
         <div class="projects-filters">
-          <button class="filter-btn active" data-filter="all">Toate</button>
-          <button class="filter-btn" data-filter="frontend">Frontend</button>
-          <button class="filter-btn" data-filter="backend">Backend</button>
-          <button class="filter-btn" data-filter="ai">AI & ML</button>
-          <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="filter-btn active" data-filter="all" data-ro="Toate" data-en="All">Toate</button>
+          <button class="filter-btn" data-filter="frontend" data-ro="Frontend" data-en="Frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend" data-ro="Backend" data-en="Backend">Backend</button>
+          <button class="filter-btn" data-filter="ai" data-ro="AI & ML" data-en="AI & ML">AI & ML</button>
+          <button class="filter-btn" data-filter="fullstack" data-ro="Full-Stack" data-en="Full-Stack">Full-Stack</button>
         </div>
         
         <!-- Grid Proiecte -->
@@ -315,10 +336,10 @@
           <div class="project-card animate-ready" data-category="frontend" data-delay="0">
             <div class="project-card-header">
               <span class="project-tech-badge">WebGL 3D</span>
-              <span class="project-status in-construction">În construcție</span>
+              <span class="project-status in-construction" data-ro="În construcție" data-en="In progress">În construcție</span>
             </div>
             <h3>Creative 3D Portfolio</h3>
-            <p>Un portofoliu personal 3D imersiv construit folosind React Three Fiber și shadere custom.</p>
+            <p data-ro="Un portofoliu personal 3D imersiv construit folosind React Three Fiber și shadere custom." data-en="An immersive personal 3D portfolio built using React Three Fiber and custom shaders.">Un portofoliu personal 3D imersiv construit folosind React Three Fiber și shadere custom.</p>
             <div class="project-tags">
               <span class="project-tag">React</span>
               <span class="project-tag">R3F</span>
@@ -327,13 +348,13 @@
               <span class="project-tag">Tailwind CSS</span>
             </div>
             <div class="project-details">
-              <p><strong>Detalii Proiect:</strong></p>
-              <p>Acest proiect reprezintă o explorare avansată a graficii web 3D. Utilizează shadere GLSL personalizate pentru a randa particule animate reactiv la mișcarea mouse-ului și fundaluri dinamice imersive.</p>
+              <p><strong><span data-ro="Detalii Proiect:" data-en="Project Details:">Detalii Proiect:</span></strong></p>
+              <p data-ro="Acest proiect reprezintă o explorare avansată a graficii web 3D. Utilizează shadere GLSL personalizate pentru a randa particule animate reactiv la mișcarea mouse-ului și fundaluri dinamice imersive." data-en="This project represents an advanced exploration of 3D web graphics. It uses custom GLSL shaders to render animated particles that react to mouse movements and immersive dynamic backgrounds.">Acest proiect reprezintă o explorare avansată a graficii web 3D. Utilizează shadere GLSL personalizate pentru a randa particule animate reactiv la mișcarea mouse-ului și fundaluri dinamice imersive.</p>
             </div>
             <div class="project-links">
               <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                Cod Sursă GitHub
+                <span data-ro="Cod Sursă GitHub" data-en="GitHub Source">Cod Sursă GitHub</span>
               </a>
               <button type="button" class="details-toggle-btn">Detalii ▼</button>
             </div>
@@ -343,10 +364,10 @@
           <div class="project-card animate-ready" data-category="backend" data-delay="150">
             <div class="project-card-header">
               <span class="project-tech-badge">Databases</span>
-              <span class="project-status in-construction">În construcție</span>
+              <span class="project-status in-construction" data-ro="În construcție" data-en="In progress">În construcție</span>
             </div>
-            <h3>Sistem Gestiune Oracle</h3>
-            <p>Aplicație backend de gestiune comercială conectată la o bază de date Oracle cu tranzacționare în timp real.</p>
+            <h3 data-ro="Sistem Gestiune Oracle" data-en="Oracle Management System">Sistem Gestiune Oracle</h3>
+            <p data-ro="Aplicație backend de gestiune comercială conectată la o bază de date Oracle cu tranzacționare în timp real." data-en="Commercial management backend application connected to an Oracle database with real-time trading.">Aplicație backend de gestiune comercială conectată la o bază de date Oracle cu tranzacționare în timp real.</p>
             <div class="project-tags">
               <span class="project-tag">Oracle SQL</span>
               <span class="project-tag">PL/SQL Triggers</span>
@@ -354,13 +375,13 @@
               <span class="project-tag">Java OOP</span>
             </div>
             <div class="project-details">
-              <p><strong>Detalii Proiect:</strong></p>
-              <p>Proiectul include modelarea completă a bazei de date relaționale, proceduri stocate complexe, cursoare, declanșatori (triggers) pentru securitate și un bridge JDBC implementat într-o consolă Java securizată.</p>
+              <p><strong><span data-ro="Detalii Proiect:" data-en="Project Details:">Detalii Proiect:</span></strong></p>
+              <p data-ro="Proiectul include modelarea completă a bazei de date relaționale, proceduri stocate complexe, cursoare, declanșatori (triggers) pentru securitate și un bridge JDBC implementat într-o consolă Java securizată." data-en="The project includes full relational database modeling, complex stored procedures, cursors, security triggers, and a JDBC bridge implemented in a secured Java console.">Proiectul include modelarea completă a bazei de date relaționale, proceduri stocate complexe, cursoare, declanșatori (triggers) pentru securitate și un bridge JDBC implementat într-o consolă Java securizată.</p>
             </div>
             <div class="project-links">
               <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                Cod Sursă GitHub
+                <span data-ro="Cod Sursă GitHub" data-en="GitHub Source">Cod Sursă GitHub</span>
               </a>
               <button type="button" class="details-toggle-btn">Detalii ▼</button>
             </div>
@@ -370,10 +391,10 @@
           <div class="project-card animate-ready" data-category="ai" data-delay="300">
             <div class="project-card-header">
               <span class="project-tech-badge">Artificial Intelligence</span>
-              <span class="project-status launched">Lansat</span>
+              <span class="project-status launched" data-ro="Lansat" data-en="Launched">Lansat</span>
             </div>
             <h3>AI Chatbot Interface</h3>
-            <p>Interfață de chat fluidă conectată prin API-uri LLM, oferind răspunsuri generative în timp real cu streaming.</p>
+            <p data-ro="Interfață de chat fluidă conectată prin API-uri LLM, oferind răspunsuri generative în timp real cu streaming." data-en="Fluid chat interface connected via LLM APIs, providing real-time generative responses with streaming.">Interfață de chat fluidă conectată prin API-uri LLM, oferind răspunsuri generative în timp real cu streaming.</p>
             <div class="project-tags">
               <span class="project-tag">TypeScript</span>
               <span class="project-tag">React</span>
@@ -383,9 +404,9 @@
             <div class="project-links">
               <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                Cod Sursă GitHub
+                <span data-ro="Cod Sursă GitHub" data-en="GitHub Source">Cod Sursă GitHub</span>
               </a>
-              <a href="#" class="demo-link">Demo Live →</a>
+              <a href="#" class="demo-link" data-ro="Demo Live →" data-en="Live Demo →">Demo Live →</a>
             </div>
           </div>
           
@@ -393,10 +414,10 @@
           <div class="project-card animate-ready" data-category="backend" data-delay="0">
             <div class="project-card-header">
               <span class="project-tech-badge">Java Backend</span>
-              <span class="project-status launched">Lansat</span>
+              <span class="project-status launched" data-ro="Lansat" data-en="Launched">Lansat</span>
             </div>
             <h3>Java Spring E-Commerce API</h3>
-            <p>API RESTful robust și complet dezvoltat în Java Spring Boot pentru platforme de comerț electronic.</p>
+            <p data-ro="API RESTful robust și complet dezvoltat în Java Spring Boot pentru platforme de comerț electronic." data-en="Robust and complete RESTful API developed in Java Spring Boot for e-commerce platforms.">API RESTful robust și complet dezvoltat în Java Spring Boot pentru platforme de comerț electronic.</p>
             <div class="project-tags">
               <span class="project-tag">Java SE</span>
               <span class="project-tag">Spring Boot</span>
@@ -405,13 +426,13 @@
               <span class="project-tag">JPA/Hibernate</span>
             </div>
             <div class="project-details">
-              <p><strong>Detalii Proiect:</strong></p>
-              <p>Include sistem complet de autentificare securizată prin JWT, controlul rolurilor, gestiunea coșului de cumpărături, checkout cu tranzacții ACID controlate prin Spring @Transactional și generare automată de PDF-uri.</p>
+              <p><strong><span data-ro="Detalii Proiect:" data-en="Project Details:">Detalii Proiect:</span></strong></p>
+              <p data-ro="Include sistem complet de autentificare securizată prin JWT, controlul rolurilor, gestiunea coșului de cumpărături, checkout cu tranzacții ACID controlate prin Spring @Transactional și generare automată de PDF-uri." data-en="Includes a complete security authentication system via JWT, role control, cart management, checkout with ACID transactions controlled via Spring @Transactional, and automatic PDF generation.">Include sistem complet de autentificare securizată prin JWT, controlul rolurilor, gestiunea coșului de cumpărături, checkout cu tranzacții ACID controlate prin Spring @Transactional și generare automată de PDF-uri.</p>
             </div>
             <div class="project-links">
               <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                Cod Sursă GitHub
+                <span data-ro="Cod Sursă GitHub" data-en="GitHub Source">Cod Sursă GitHub</span>
               </a>
               <button type="button" class="details-toggle-btn">Detalii ▼</button>
             </div>
@@ -421,10 +442,10 @@
           <div class="project-card animate-ready" data-category="fullstack" data-delay="150">
             <div class="project-card-header">
               <span class="project-tech-badge">Full-Stack</span>
-              <span class="project-status launched">Lansat</span>
+              <span class="project-status launched" data-ro="Lansat" data-en="Launched">Lansat</span>
             </div>
             <h3>Task Manager App</h3>
-            <p>Aplicație completă de management al task-urilor cu autentificare, CRUD și interfață modernă.</p>
+            <p data-ro="Aplicație completă de management al task-urilor cu autentificare, CRUD și interfață modernă." data-en="Complete task management application with authentication, CRUD operations, and a modern interface.">Aplicație completă de management al task-urilor cu autentificare, CRUD și interfață modernă.</p>
             <div class="project-tags">
               <span class="project-tag">React</span>
               <span class="project-tag">TypeScript</span>
@@ -434,9 +455,9 @@
             <div class="project-links">
               <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                Cod Sursă GitHub
+                <span data-ro="Cod Sursă GitHub" data-en="GitHub Source">Cod Sursă GitHub</span>
               </a>
-              <a href="#" class="demo-link">Demo Live →</a>
+              <a href="#" class="demo-link" data-ro="Demo Live →" data-en="Live Demo →">Demo Live →</a>
             </div>
           </div>
           
@@ -444,10 +465,10 @@
           <div class="project-card animate-ready" data-category="frontend" data-delay="300">
             <div class="project-card-header">
               <span class="project-tech-badge">Three.js</span>
-              <span class="project-status launched">Lansat</span>
+              <span class="project-status launched" data-ro="Lansat" data-en="Launched">Lansat</span>
             </div>
             <h3>3D Landing Page</h3>
-            <p>Landing page interactiv cu geometrie 3D animată, shader-uri custom și efecte de lumină dinamice.</p>
+            <p data-ro="Landing page interactiv cu geometrie 3D animată, shader-uri custom și efecte de lumină dinamice." data-en="Interactive landing page with animated 3D geometry, custom shaders, and dynamic lighting effects.">Landing page interactiv cu geometrie 3D animată, shader-uri custom și efecte de lumină dinamice.</p>
             <div class="project-tags">
               <span class="project-tag">Three.js</span>
               <span class="project-tag">WebGL</span>
@@ -457,9 +478,9 @@
             <div class="project-links">
               <a href="https://github.com/Vasilcan" target="_blank" class="github-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                Cod Sursă GitHub
+                <span data-ro="Cod Sursă GitHub" data-en="GitHub Source">Cod Sursă GitHub</span>
               </a>
-              <a href="#" class="demo-link">Demo Live →</a>
+              <a href="#" class="demo-link" data-ro="Demo Live →" data-en="Live Demo →">Demo Live →</a>
             </div>
           </div>
         </div>
@@ -470,9 +491,12 @@
     <section id="contact">
       <div class="container">
         <div class="contact-header">
-          <span class="section-badge">Contact</span>
-          <h2 class="contact-title">Hai să <span class="text-gradient">discutăm</span></h2>
-          <p class="contact-subtitle">Fie că ai un proiect interesant, o colaborare sau pur și simplu vrei să discutăm tech — sunt disponibil.</p>
+          <span class="section-badge" data-ro="Contact" data-en="Contact">Contact</span>
+          <h2 class="contact-title">
+            <span data-ro="Hai să " data-en="Let's ">Hai să </span>
+            <span class="text-gradient" data-ro="discutăm" data-en="talk">discutăm</span>
+          </h2>
+          <p class="contact-subtitle" data-ro="Fie că ai un proiect interesant, o colaborare sau pur și simplu vrei să discutăm tech — sunt disponibil." data-en="Whether you have an interesting project, a collaboration, or just want to talk tech — I am available.">Fie că ai un proiect interesant, o colaborare sau pur și simplu vrei să discutăm tech — sunt disponibil.</p>
         </div>
         
         <div class="contact-grid">
@@ -487,7 +511,7 @@
                 </svg>
               </div>
               <div class="contact-card-content">
-                <span class="contact-card-title">Email</span>
+                <span class="contact-card-title" data-ro="Email" data-en="Email">Email</span>
                 <a href="mailto:vasilcan.darius@example.com" class="contact-card-link">vasilcan.darius@example.com</a>
               </div>
             </div>
@@ -500,7 +524,7 @@
                 </svg>
               </div>
               <div class="contact-card-content">
-                <span class="contact-card-title">GitHub</span>
+                <span class="contact-card-title" data-ro="GitHub" data-en="GitHub">GitHub</span>
                 <a href="https://github.com/Vasilcan" target="_blank" rel="noopener noreferrer" class="contact-card-link">github.com/Vasilcan</a>
               </div>
             </div>
@@ -515,7 +539,7 @@
                 </svg>
               </div>
               <div class="contact-card-content">
-                <span class="contact-card-title">LinkedIn</span>
+                <span class="contact-card-title" data-ro="LinkedIn" data-en="LinkedIn">LinkedIn</span>
                 <a href="https://linkedin.com/in/vasilcan-darius" target="_blank" rel="noopener noreferrer" class="contact-card-link">linkedin.com/in/vasilcan-darius</a>
               </div>
             </div>
@@ -524,9 +548,9 @@
             <div class="availability-banner animate-ready">
               <div class="availability-banner-header">
                 <span class="pulse-dot"></span>
-                <strong>Disponibil pentru proiecte freelance și colaborări</strong>
+                <strong data-ro="Disponibil pentru proiecte freelance și colaborări" data-en="Available for freelance projects and collaborations">Disponibil pentru proiecte freelance și colaborări</strong>
               </div>
-              <p class="availability-banner-note">Răspund în general în 24 de ore</p>
+              <p class="availability-banner-note" data-ro="Răspund în general în 24 de ore" data-en="I usually reply within 24 hours">Răspund în general în 24 de ore</p>
             </div>
           </div>
           
@@ -534,23 +558,23 @@
           <div class="contact-form-wrap">
             <form id="contact-form" novalidate>
               <div class="form-group">
-                <label for="name" class="sr-only">Nume complet</label>
-                <input type="text" id="name" name="name" required placeholder="Vasilcan Darius">
+                <label for="name" class="sr-only" data-ro="Nume complet" data-en="Full name">Nume complet</label>
+                <input type="text" id="name" name="name" required placeholder="Vasilcan Darius" data-placeholder-ro="Vasilcan Darius" data-placeholder-en="Vasilcan Darius">
               </div>
               <div class="form-group">
-                <label for="email" class="sr-only">Email</label>
-                <input type="email" id="email" name="email" required placeholder="email@exemplu.com">
+                <label for="email" class="sr-only" data-ro="Email" data-en="Email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="email@exemplu.com" data-placeholder-ro="email@exemplu.com" data-placeholder-en="email@example.com">
               </div>
               <div class="form-group">
-                <label for="subject" class="sr-only">Subiect</label>
-                <input type="text" id="subject" name="subject" required placeholder="Proiect nou / Colaborare / Altceva">
+                <label for="subject" class="sr-only" data-ro="Subiect" data-en="Subject">Subiect</label>
+                <input type="text" id="subject" name="subject" required placeholder="Proiect nou / Colaborare / Altceva" data-placeholder-ro="Proiect nou / Colaborare / Altceva" data-placeholder-en="New project / Collaboration / Other">
               </div>
               <div class="form-group">
-                <label for="message" class="sr-only">Mesaj</label>
-                <textarea id="message" name="message" required rows="5" placeholder="Descrie proiectul sau ideea ta..."></textarea>
+                <label for="message" class="sr-only" data-ro="Mesaj" data-en="Message">Mesaj</label>
+                <textarea id="message" name="message" required rows="5" placeholder="Descrie proiectul sau ideea ta..." data-placeholder-ro="Descrie proiectul sau ideea ta..." data-placeholder-en="Describe your project or idea..."></textarea>
               </div>
               
-              <button type="submit" class="btn-primary full-width-btn">Trimite mesajul →</button>
+              <button type="submit" class="btn-primary full-width-btn" data-ro="Trimite mesajul →" data-en="Send message →">Trimite mesajul →</button>
               <div id="form-status"></div>
             </form>
           </div>
@@ -564,10 +588,10 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#hero" class="nav-logo">VD</a>
-        <span class="footer-name">Vasilcan Darius</span>
+        <span class="footer-name" data-ro="Vasilcan Darius" data-en="Vasilcan Darius">Vasilcan Darius</span>
       </div>
       <div class="footer-center">
-        <p>© 2026 Vasilcan Darius. Construit cu ❤️ și Vanilla JS.</p>
+        <p data-ro="© 2026 Vasilcan Darius. Construit cu ❤️ și Vanilla JS." data-en="© 2026 Vasilcan Darius. Built with ❤️ and Vanilla JS.">© 2026 Vasilcan Darius. Construit cu ❤️ și Vanilla JS.</p>
       </div>
       <div class="footer-right">
         <div class="footer-socials">
@@ -578,7 +602,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-social-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
           </a>
         </div>
-        <button type="button" class="scroll-top-btn" id="scroll-top" aria-label="Mergi sus">↑</button>
+        <button type="button" class="scroll-top-btn" id="scroll-top" aria-label="Mergi sus" data-aria-ro="Mergi sus" data-aria-en="Scroll to top">↑</button>
       </div>
     </div>
   </footer>

@@ -86,15 +86,14 @@ const fetchGitHubStats = async () => {
       const activityItem = document.getElementById('github-activity-item');
       const activeDaysVal = document.getElementById('github-active-days');
       if (activityItem && activeDaysVal) {
-        let activeText = '';
-        if (diffDays === 0) {
-          activeText = 'activ astăzi';
-        } else if (diffDays === 1) {
-          activeText = 'activ ieri';
-        } else {
-          activeText = `activ acum ${diffDays} zile`;
-        }
-        activeDaysVal.textContent = activeText;
+        const activeRo = diffDays === 0 ? 'activ astăzi' : (diffDays === 1 ? 'activ ieri' : `activ acum ${diffDays} zile`);
+        const activeEn = diffDays === 0 ? 'active today' : (diffDays === 1 ? 'active yesterday' : `active ${diffDays} days ago`);
+        
+        activeDaysVal.setAttribute('data-ro', activeRo);
+        activeDaysVal.setAttribute('data-en', activeEn);
+        
+        const currentLang = document.documentElement.lang || 'ro';
+        activeDaysVal.textContent = currentLang === 'en' ? activeEn : activeRo;
         activityItem.style.display = 'inline-flex';
       }
     }
@@ -116,11 +115,13 @@ const initAvailabilityBanner = () => {
     const banner = document.createElement('div');
     banner.id = 'availability-cta';
     
+    const currentLang = document.documentElement.lang || 'ro';
+    
     banner.innerHTML = `
       <span class="pulse-dot"></span>
-      <span>Disponibil pentru proiecte</span>
-      <a href="#contact" class="cta-link">→ Contact</a>
-      <button type="button" class="close-btn" aria-label="Închide">&times;</button>
+      <span data-ro="Disponibil pentru proiecte" data-en="Available for projects">${currentLang === 'en' ? 'Available for projects' : 'Disponibil pentru proiecte'}</span>
+      <a href="#contact" class="cta-link" data-ro="→ Contact" data-en="→ Contact">→ Contact</a>
+      <button type="button" class="close-btn" aria-label="${currentLang === 'en' ? 'Close' : 'Închide'}" data-aria-ro="Închide" data-aria-en="Close">&times;</button>
     `;
     
     document.body.appendChild(banner);
