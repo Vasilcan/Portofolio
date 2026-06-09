@@ -96,10 +96,7 @@
       <div class="container">
         <div class="about-header">
           <span class="section-badge" data-ro="Despre mine" data-en="About me">Despre mine</span>
-          <h2 class="about-title">
-            <span data-ro="Cine este " data-en="Who is ">Cine este </span>
-            <span class="text-gradient" data-ro="Vasilcan Darius" data-en="Vasilcan Darius">Vasilcan Darius</span>?
-          </h2>
+          <h2 class="about-title" data-ro="Vasilcan Darius" data-en="Vasilcan Darius"><span class="text-gradient">Vasilcan Darius</span></h2>
         </div>
         <div class="about-grid">
           <!-- COLOANA STÂNGĂ — FOTO & DISPONIBILITATE -->
@@ -113,42 +110,30 @@
           
           <!-- COLOANA DREAPTĂ — TEXT & STATISTICI -->
           <div class="about-content">
-            <p class="about-lead" data-ro="Sunt student la facultatea de Cibernetică, Statistică și Informatică Economică, axat pe rezolvarea de probleme prin cod eficient și design intuitiv." data-en="I am a student at the Faculty of Cybernetics, Statistics and Economic Informatics, focused on solving problems through efficient code and intuitive design.">Sunt student la facultatea de Cibernetică, Statistică și Informatică Economică, axat pe rezolvarea de probleme prin cod eficient și design intuitiv.</p>
-            <p class="about-text" data-ro="Mă concentrez pe stiva modernă de web (React, TypeScript), dar am o bază solidă de programare în Java Spring Boot, gestiunea datelor cu Oracle SQL și integrarea celor mai recente API-uri de AI generativ pentru a automatiza fluxuri și a spori productivitatea." data-en="I focus on the modern web stack (React, TypeScript), but I have a solid foundation in Java Spring Boot programming, data management with Oracle SQL, and integrating the latest generative AI APIs to automate workflows and increase productivity.">Mă concentrez pe stiva modernă de web (React, TypeScript), dar am o bază solidă de programare în Java Spring Boot, gestiunea datelor cu Oracle SQL și integrarea celor mai recente API-uri de AI generativ pentru a automatiza fluxuri și a spori productivitatea.</p>
+            <p style="font-weight: 500; font-size: 1.15rem; margin-bottom: 1rem;" data-ro="Pasionat de tehnologie și student la FSEGA (Informatică Economică). Focusul meu este ingineria software: scriu cod optimizat pentru a rezolva probleme reale și creez experiențe digitale fluide, de la baza de date până la interfața utilizatorului." data-en="Technology enthusiast and student at FSEGA (Economic Informatics). My focus is software engineering: I write optimized code to solve real-world problems and create fluid digital experiences, from the database to the user interface.">
+              Pasionat de tehnologie și student la FSEGA (Informatică Economică). Focusul meu este ingineria software: scriu cod optimizat pentru a rezolva probleme reale și creez experiențe digitale fluide, de la baza de date până la interfața utilizatorului.
+            </p>
             
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;" data-ro="Am o bază tehnică solidă în programare Java și gestiunea bazelor de date cu Oracle SQL. Sunt un adept al dezvoltării asistate de AI, folosind modele generative pentru a accelera fluxul de lucru, a rafina logica și a mă concentra pe arhitectura de ansamblu a proiectelor." data-en="I have a solid technical foundation in Java programming and database management with Oracle SQL. I am an advocate of AI-assisted development, using generative models to accelerate workflows, refine logic, and focus on the overall architecture of the projects.">
+              Am o bază tehnică solidă în programare Java și gestiunea bazelor de date cu Oracle SQL. Sunt un adept al dezvoltării asistate de AI, folosind modele generative pentru a accelera fluxul de lucru, a rafina logica și a mă concentra pe arhitectura de ansamblu a proiectelor.
+            </p>
+
             <div class="about-stats">
               <div class="stat-card">
-                <span class="stat-number" data-target="2">2+</span>
-                <span class="stat-label" data-ro="Ani Dezvoltare Web" data-en="Years Web Dev">Ani Dezvoltare Web</span>
+                <div class="stat-number">0</div>
+                <div class="stat-label" data-ro="Ani Dezvoltare Web" data-en="Years Web Dev">Ani Dezvoltare Web</div>
               </div>
               <div class="stat-card">
-                <span class="stat-number" id="github-projects" data-target="15">15+</span>
-                <span class="stat-label" data-ro="Proiecte Finalizate" data-en="Completed Projects">Proiecte Finalizate</span>
+                <div class="stat-number">0</div>
+                <div class="stat-label" data-ro="Proiecte Finalizate" data-en="Completed Projects">Proiecte Finalizate</div>
               </div>
               <div class="stat-card">
-                <span class="stat-number" data-target="10">10+</span>
-                <span class="stat-label" data-ro="Tehnologii Stăpânite" data-en="Technologies Mastered">Tehnologii Stăpânite</span>
+                <div class="stat-number">0</div>
+                <div class="stat-label" data-ro="Tehnologii Stăpânite" data-en="Mastered Technologies">Tehnologii Stăpânite</div>
               </div>
             </div>
-            
-            <!-- Statistici GitHub suplimentare (afișate dinamic prin JS) -->
-            <div class="github-extra-stats" id="github-extra-stats" style="display:none; margin-top: 1rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem;">
-              <p style="margin-bottom: 0.5rem;" data-ro="📊 Activitate Live GitHub (username: Vasilcan):" data-en="📊 Live GitHub Activity (username: Vasilcan):">📊 <strong>Activitate Live GitHub (username: Vasilcan):</strong></p>
-              <ul style="list-style: none; padding-left: 0; display: flex; flex-wrap: wrap; gap: 1rem;">
-                <li id="github-stars-item" style="display:none; align-items: center; gap: 0.25rem;">
-                  ⭐ <span id="github-stars">0</span> <span data-ro="stele primite" data-en="stars received">stele primite</span>
-                </li>
-                <li id="github-activity-item" style="display:none; align-items: center; gap: 0.25rem;">
-                  📅 <span id="github-active-days" data-ro="activ recent" data-en="recent activity">activ recent</span>
-                </li>
-                <li id="github-languages-item" style="display:none; align-items: center; gap: 0.25rem;">
-                  💻 <span data-ro="Top limbaje: " data-en="Top languages: ">Top limbaje: </span><span id="github-languages"></span>
-                </li>
-              </ul>
-            </div>
-            
+
             <div class="about-buttons">
-              <a href="assets/cv/cv-darius.pdf" download class="btn-primary" data-ro="Descarcă CV" data-en="Download CV">Descarcă CV</a>
               <a href="#contact" class="btn-secondary" data-ro="Hai să discutăm →" data-en="Let's talk →">Hai să discutăm →</a>
             </div>
           </div>
