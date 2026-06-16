@@ -15,12 +15,12 @@
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-  // Poziționare în funcție de ecran
-  let offset = 55;
-  let scale = 1.3;
+  // Poziționare și mărire (Am crescut scale-ul și offset-ul ca să încapă mai bine)
+  let offset = 68;
+  let scale = 1.7; // Mărite de la 1.3
   if (window.innerWidth < 768) {
-    offset = 30;
-    scale = 0.8;
+    offset = 35;
+    scale = 1.0; // Mărite pe mobil
     camera.position.z = 120;
   }
 
@@ -37,7 +37,7 @@
     color: 0x4c1d95, // Violet închis
     wireframe: true,
     transparent: true,
-    opacity: 0.08, // Foarte transparent ca să nu strice scrisul
+    opacity: 0.08, 
     blending: THREE.AdditiveBlending
   });
 
@@ -60,17 +60,17 @@
   vShape.lineTo(0, -2);
   vShape.lineTo(-4, 10);
 
-  // Setări de volum (Extrude) pentru litere
   const extrudeSettings = { depth: 3, bevelEnabled: true, bevelSegments: 2, steps: 1, bevelSize: 0.5, bevelThickness: 0.5 };
 
   const dGeometry = new THREE.ExtrudeGeometry(dShape, extrudeSettings);
-  dGeometry.center(); // Centrează axa de rotație în mijlocul literei
+  dGeometry.center(); 
   
   const vGeometry = new THREE.ExtrudeGeometry(vShape, extrudeSettings);
   vGeometry.center();
 
-  // CONSTRUIRE CUB CENTRU
-  const cubeGeometry = new THREE.BoxGeometry(22, 22, 22);
+  // CUBURI
+  const centerCubeGeometry = new THREE.BoxGeometry(22, 22, 22);
+  const topCubeGeometry = new THREE.BoxGeometry(14, 14, 14); // Cubul mai mic de sus
 
   // Creare Mesh-uri
   const leftMesh = new THREE.Mesh(dGeometry, sideMaterial);
@@ -83,10 +83,14 @@
   rightMesh.scale.set(scale, scale, scale);
   scene.add(rightMesh);
 
-  const centerMesh = new THREE.Mesh(cubeGeometry, centerMaterial);
-  centerMesh.position.set(0, 0, -20); // Împins ușor în spate în spatele textului
+  const centerMesh = new THREE.Mesh(centerCubeGeometry, centerMaterial);
+  centerMesh.position.set(0, 0, -20);
   centerMesh.scale.set(scale * 1.2, scale * 1.2, scale * 1.2);
   scene.add(centerMesh);
+
+  const topCubeMesh = new THREE.Mesh(topCubeGeometry, sideMaterial);
+  topCubeMesh.position.set(0, 38, -10); // Așezat deasupra textului
+  scene.add(topCubeMesh);
 
   // Logica Mouse (Parallax)
   let mouseX = 0;
@@ -103,7 +107,7 @@
   function animate() {
     requestAnimationFrame(animate);
 
-    // Rotații asimetrice pentru fiecare formă
+    // Rotații
     leftMesh.rotation.x += 0.003;
     leftMesh.rotation.y += 0.005;
     
@@ -113,9 +117,12 @@
     centerMesh.rotation.x += 0.002;
     centerMesh.rotation.y += 0.002;
 
+    topCubeMesh.rotation.x -= 0.003;
+    topCubeMesh.rotation.y -= 0.005;
+
     // Mișcare lină după mouse
     targetX += (mouseX - targetX) * 0.05;
-    targetY += (mouseY - targetY) * 0.05;
+    targetY += (mouseY - targetY) * 0.05; 
 
     leftMesh.position.x = -offset + targetX * 0.3;
     leftMesh.position.y = -targetY * 0.3;
@@ -125,6 +132,9 @@
 
     centerMesh.position.x = targetX * 0.1;
     centerMesh.position.y = -targetY * 0.1;
+
+    topCubeMesh.position.x = targetX * 0.2;
+    topCubeMesh.position.y = 38 - targetY * 0.2; // Parallax pe Y având baza la 38
 
     renderer.render(scene, camera);
   }
