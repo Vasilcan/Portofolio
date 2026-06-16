@@ -34,6 +34,9 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/main.css">
+  
+  <!-- === THREE.JS === -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content" data-ro="Sari la conținutul principal" data-en="Skip to main content">Sari la conținutul principal</a>
@@ -72,9 +75,9 @@
   <!-- === CONȚINUT PRINCIPAL === -->
   <main id="main-content">
     <!-- === SECTIUNEA HERO === -->
-    <section id="hero">
-      <div id="hero-canvas"></div>
-      <div class="container hero-container">
+    <section id="hero" style="position: relative; overflow: hidden;">
+      <canvas id="hero-canvas"></canvas>
+      <div class="container hero-container" style="position: relative; z-index: 1;">
         <h1 class="hero-title">
           <span data-ro="Salut, sunt" data-en="Hi, I'm">Salut, sunt</span>
           <span class="text-gradient" data-ro="Darius" data-en="Darius">Darius</span>
@@ -118,18 +121,14 @@
               Am o bază tehnică solidă în programare Java și gestiunea bazelor de date cu Oracle SQL. Sunt un adept al dezvoltării asistate de AI, folosind modele generative pentru a accelera fluxul de lucru, a rafina logica și a mă concentra pe arhitectura de ansamblu a proiectelor.
             </p>
 
-            <div class="about-stats">
-              <div class="stat-card">
-                <div class="stat-number">0</div>
-                <div class="stat-label" data-ro="Ani Dezvoltare Web" data-en="Years Web Dev">Ani Dezvoltare Web</div>
+            <div class="about-stats" style="display: flex; gap: 1.5rem; justify-content: flex-start; flex-wrap: wrap;">
+              <div class="stat-card" style="flex: 1; min-width: 140px;">
+                <div class="stat-number">2</div>
+                <div class="stat-label" data-ro="An de Facultate" data-en="University Year">An de Facultate</div>
               </div>
-              <div class="stat-card">
-                <div class="stat-number">0</div>
+              <div class="stat-card" style="flex: 1; min-width: 140px;">
+                <div class="stat-number">3</div>
                 <div class="stat-label" data-ro="Proiecte Finalizate" data-en="Completed Projects">Proiecte Finalizate</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number">0</div>
-                <div class="stat-label" data-ro="Tehnologii Stăpânite" data-en="Mastered Technologies">Tehnologii Stăpânite</div>
               </div>
             </div>
 
@@ -349,7 +348,7 @@
               </div>
               <div class="contact-card-content">
                 <span class="contact-card-title" data-ro="Email" data-en="Email">Email</span>
-                <a href="mailto:vasilcan.darius@example.com" class="contact-card-link">vasilcan.darius@example.com</a>
+                <a href="mailto:vasilcandarius50@gmail.com" class="contact-card-link">vasilcandarius50@gmail.com</a>
               </div>
             </div>
             
@@ -450,8 +449,7 @@
   <script type="module" defer src="js/projects.js"></script>
   <script type="module" defer src="js/github-stats.js"></script>
   <script type="module" defer src="js/contact.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script type="module" defer src="js/three-hero.js"></script>
+  <script src="js/three-hero.js"></script>
 
 </body>
 </html>
